@@ -15,4 +15,4 @@ class Queen:
         return FILE_POSSIBLE_NAMES.index(file_representation), int(row_representation)
 
     def can_capture(self, other_queen: "Queen") -> bool:
-        return self.row == other_queen.row
+        return self.row == other_queen.row or self.file == other_queen.file
