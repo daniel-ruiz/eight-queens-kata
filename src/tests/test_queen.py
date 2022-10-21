@@ -18,3 +18,7 @@ class TestQueen:
     def test_queen_can_capture_queens_in_the_other_diagonal(self):
         assert Queen("c4").can_capture(Queen("e2"))
         assert Queen("e2").can_capture(Queen("c4"))
+
+    def test_queen_cannot_capture_queens_not_in_same_row_or_file_or_diagonal(self):
+        assert not Queen("g6").can_capture(Queen("h4"))
+        assert not Queen("h4").can_capture(Queen("g6"))
