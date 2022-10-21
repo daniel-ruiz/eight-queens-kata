@@ -15,4 +15,13 @@ class Queen:
         return FILE_POSSIBLE_NAMES.index(file_representation), int(row_representation)
 
     def can_capture(self, other_queen: "Queen") -> bool:
-        return self.row == other_queen.row or self.file == other_queen.file
+        return (
+            self._is_other_queen_in_same_row(other_queen)
+            or self._is_other_queen_in_same_file(other_queen)
+        )
+
+    def _is_other_queen_in_same_file(self, other_queen):
+        return self.file == other_queen.file
+
+    def _is_other_queen_in_same_row(self, other_queen: "Queen") -> bool:
+        return self.row == other_queen.row
