@@ -1,3 +1,6 @@
+from eigth_queens_kata.solver import EightQueensSolver
+
+
 class TestSolver:
 
     def test_returns_eight_queens_that_cannot_be_captured_between_themselves(self):
