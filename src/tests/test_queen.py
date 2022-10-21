@@ -14,3 +14,7 @@ class TestQueen:
     def test_queen_can_capture_queens_in_one_diagonal(self):
         assert Queen("c4").can_capture(Queen("f7"))
         assert Queen("f7").can_capture(Queen("c4"))
+
+    def test_queen_can_capture_queens_in_the_other_diagonal(self):
+        assert Queen("c4").can_capture(Queen("e2"))
+        assert Queen("e2").can_capture(Queen("c4"))

@@ -28,4 +28,4 @@ class Queen:
         return self.row == other_queen.row
 
     def _is_other_queen_in_a_diagonal(self, other_queen: "Queen") -> bool:
-        return self.file - other_queen.file == self.row - other_queen.row
+        return abs(self.file - other_queen.file) == abs(self.row - other_queen.row)
