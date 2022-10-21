@@ -21,7 +21,7 @@ class Queen:
             or self._is_other_queen_in_a_diagonal(other_queen)
         )
 
-    def _is_other_queen_in_same_file(self, other_queen):
+    def _is_other_queen_in_same_file(self, other_queen: "Queen") -> bool:
         return self.file == other_queen.file
 
     def _is_other_queen_in_same_row(self, other_queen: "Queen") -> bool:
