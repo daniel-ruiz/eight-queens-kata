@@ -1,3 +1,6 @@
+from eigth_queens_kata.models import Queen
+
+
 class TestQueen:
 
     def test_queen_can_capture_queens_of_the_same_row(self):
