@@ -6,7 +6,11 @@ FILE_POSSIBLE_NAMES = 'abcdefgh'
 class Queen:
 
     def __init__(self, position: str) -> None:
+        self.position = position
         self.file, self.row = self._calculate_cartesian_position(position)
+
+    def __repr__(self) -> str:
+        return f"Queen({self.position})"
 
     def _calculate_cartesian_position(self, position: str) -> Tuple[int, int]:
         file_representation = position[0]
