@@ -1,6 +1,6 @@
 from typing import List
 
-from eigth_queens_kata.models import Queen
+from eight_queens_kata.models import Queen
 
 CHESS_BOARD_POSITIONS = [
     "a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8",

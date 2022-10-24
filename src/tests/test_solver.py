@@ -1,4 +1,4 @@
-from eigth_queens_kata.solver import EightQueensSolver
+from eight_queens_kata.solver import EightQueensSolver
 
 
 class TestSolver:

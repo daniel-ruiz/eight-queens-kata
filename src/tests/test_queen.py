@@ -1,4 +1,4 @@
-from eigth_queens_kata.models import Queen
+from eight_queens_kata.models import Queen
 
 
 class TestQueen:
