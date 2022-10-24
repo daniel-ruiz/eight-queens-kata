@@ -1,4 +1,4 @@
-# Eigth Queen Kata
+# Eight Queen Kata
 
 ## Description
 This repository was created as a way to learn about backtracking algorithms while using TDD.
