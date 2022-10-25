@@ -1,6 +1,6 @@
 from typing import Tuple
 
-FILE_POSSIBLE_NAMES = 'abcdefgh'
+LETTERS_THAT_INDICATE_A_BOARD_FILE = 'abcdefgh'
 
 
 class Queen:
@@ -16,7 +16,7 @@ class Queen:
         file_representation = position[0]
         row_representation = position[1]
 
-        return FILE_POSSIBLE_NAMES.index(file_representation), int(row_representation)
+        return LETTERS_THAT_INDICATE_A_BOARD_FILE.index(file_representation), int(row_representation)
 
     def can_capture(self, other_queen: "Queen") -> bool:
         return (
