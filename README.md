@@ -30,6 +30,7 @@ If we want to print a solution of the problem, we can execute the following scri
 from eight_queens_kata.solver import EightQueensSolver
 
 solution = EightQueensSolver().solve()
+
 print(solution)
 ```
 
