@@ -23,3 +23,14 @@ We can then run the test suite by executing the following command:
 ```
 pytest
 ```
+
+If we want to print a solution of the problem, we can execute the following script in a Python shell:
+
+```python
+from eight_queens_kata.solver import EightQueensSolver
+
+solution = EightQueensSolver().solve()
+print(solution)
+```
+
+Make sure you are in the `src` folder so that the `eight_queens_kata` package is found.
