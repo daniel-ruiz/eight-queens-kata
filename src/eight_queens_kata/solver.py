@@ -35,11 +35,10 @@ class EightQueensSolver:
             remaining_positions = self._calculate_possible_queen_positions(result, available_positions)
             did_reach_solution = self._solve_with_backtracking(result, remaining_positions)
 
-            if not did_reach_solution:
-                result.pop()
-                continue
+            if did_reach_solution:
+                return True
 
-            return True
+            result.pop()
 
         return False
 
