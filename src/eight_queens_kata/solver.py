@@ -18,14 +18,13 @@ class EightQueensSolver:
 
     def solve(self) -> List[Queen]:
         result = []
-        did_reach_solution = self._solve_with_backtracking(result, CHESS_BOARD_POSITIONS)
 
-        if not did_reach_solution:
+        if not self._can_solve_using_backtracking(result, CHESS_BOARD_POSITIONS):
             raise Exception('Could not find a solution to the problem')
 
         return result
 
-    def _solve_with_backtracking(self, result: List[Queen], available_positions: List[str]) -> bool:
+    def _can_solve_using_backtracking(self, result: List[Queen], available_positions: List[str]) -> bool:
 
         if self._no_queen_can_capture_each_other(result) and len(result) == TARGET_NUMBER_OF_QUEENS_IN_SOLUTION:
             return True
@@ -33,9 +32,8 @@ class EightQueensSolver:
         for next_position in available_positions:
             result.append(Queen(next_position))
             remaining_positions = self._calculate_possible_queen_positions(result, available_positions)
-            did_reach_solution = self._solve_with_backtracking(result, remaining_positions)
 
-            if did_reach_solution:
+            if self._can_solve_using_backtracking(result, remaining_positions):
                 return True
 
             result.pop()
